@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>dile-button demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../dile-button.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic dile-button demo</h3>
+      <demo-snippet>
+        <template>
+          <dile-button label="hohoh"></dile-button>
+          <dile-button label="hohoh" role="primary"></dile-button>
+          <dile-button label="hohoh" role="danger"></dile-button>
+          <dile-button label="hohoh" role="warning"></dile-button>
+          <dile-button label="hohoh" role="success"></dile-button>
+        </template>
+      </demo-snippet>
+      <h3>Disabled dile-button demo</h3>
+      <demo-snippet>
+        <template>
+          <dile-button id="botondisabled" label="hohoh" disabled></dile-button>
+          <dile-button label="hohoh" role="primary" disabled></dile-button>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

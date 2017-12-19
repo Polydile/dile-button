@@ -1,0 +1,152 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="dile-button">
+  <template>
+    <style>
+      :host {
+        display: inline;
+        user-select: none
+      }
+      .undefined {
+        background-color: #868e96;
+      }
+      .primary {
+        background-color: #007bff
+      }
+      .danger {
+        background-color: #dc3545
+      }
+      .success {
+        background-color: #28a745        
+      }
+      .warning {
+        background-color: #ffc107        
+      }
+      div {
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        cursor:pointer;
+        outline:none;
+        display: inline-block;
+        -webkit-animation-duration: 0.3s; 
+        animation-duration: 0.3s; 
+        -webkit-animation-fill-mode: both; 
+        animation-fill-mode: both; 
+        -webkit-animation-timing-function: ease-in; 
+        animation-timing-function: ease-in;  
+      }
+      div:active{ 
+        -webkit-animation-name: anim; 
+        animation-name: anim; 
+      }
+      @keyframes anim { 
+        0% {transform: scale(1);} 
+        10%, 30% {transform: scale(0.9) rotate(-2deg);}  
+        100% {transform: scale(1) rotate(0);} 
+      } 
+      .disabled {
+        opacity: 0.5;
+      }
+      .disabled:active {
+        animation-name: none;
+      }
+      div:active{ 
+        -webkit-animation-name: anim; 
+        animation-name: anim; 
+      }
+
+    </style>
+    <div on-click="_onClick" class$="[[cssClass]]">
+      [[label]]
+    </div>
+  </template>
+
+  <script>
+    /**
+     * # `dile-button`
+     *
+     * A simple button with styles
+     *
+     * `<dile-button>`
+     *
+     * This components accepts a "role" property to styling.
+     * Also a boolean property called "disabled" to disable the button.
+     *
+     * Clicks produce a CSS animation, if the button is not disabled.
+     *
+     * ```html
+     * <dile-button
+     *   role="primary"
+     *   disabled
+     * ></dile-timestamp-to-date>
+     * ```
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class DileButton extends Polymer.Element {
+      static get is() { return 'dile-button'; }
+      static get properties() {
+        return {
+          /**
+          * The text displayed in the button
+          * @type {String}
+          */
+          label: {
+            type: String,
+            value: 'dile-button'
+          },
+
+          /**
+          * The role of the button. This property configures the button color
+          * Values accepted: 'undefined', 'primary', 'danger', 'warning', 'success'.
+          * Default: 'undefined'.
+          * @type {String}
+          */
+          role: {
+            type: String,
+            value: 'undefined'
+          },
+
+          /**
+          * The computed CSS Class.
+          * @type {Boolean}
+          */
+          cssClass: {
+            type: String,
+            computed: '_changeClass(role, disabled)'
+          },
+
+          /**
+          * Disabled property disables the button (don't propagate click events).
+          * @type {Boolean}
+          */
+          disabled: {
+            type: Boolean,
+            value: false
+          }
+        };
+      }
+    
+      _changeClass(role, disabled) {
+        let newClass = role;
+        if (disabled) {
+          newClass += ' disabled';
+        }
+        return newClass;
+      }
+      
+
+      _onClick(e) {
+        if(this.disabled) {
+          e.stopPropagation();
+        }
+      }
+    }
+
+    window.customElements.define(DileButton.is, DileButton);
+  </script>
+</dom-module>
