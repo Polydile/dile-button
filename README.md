@@ -13,3 +13,8 @@ Clicks on the button produces a CSS animation, when the button disabled property
   disabled
 ></dile-timestamp-to-date>
 ```
+
+Custom property | Description | Default
+----------------|-------------|---------
+--dile-button-padding | Padding applied to the buttton box | 10px
+--dile-button-box | Mixind applied to the button box | {}
