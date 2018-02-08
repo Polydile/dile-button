@@ -11,7 +11,7 @@ Clicks on the button produces a CSS animation, when the button disabled property
 <dile-button
   role="primary"
   disabled
-></dile-timestamp-to-date>
+></dile-button>
 ```
 
 Custom property | Description | Default
