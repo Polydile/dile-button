@@ -1,24 +1,33 @@
 {
-  "description": "Web Component button based on LitElement",
-  "name": "@polydile/dile-button",
-  "version": "3.0.0",
-  "resolutions": {
-    "inherits": "2.0.3",
-    "samsam": "1.1.3",
-    "supports-color": "3.1.2",
-    "type-detect": "1.0.0"
+  "name": "@dile/dile-button",
+  "version": "3.0.1",
+  "description": "Web component button based on LitElement",
+  "main": "dile-button.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Polydile/dile-button.git"
+    "url": "git+https://github.com/Polydile/dile-button.git"
   },
-  "main": "dile-button.js",
+  "keywords": [
+    "webcomponents",
+    "javascript",
+    "litelement"
+  ],
+  "author": "Polydile",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Polydile/dile-button/issues"
+  },
+  "homepage": "https://github.com/Polydile/dile-button#readme",
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10"
+  },
   "dependencies": {
     "lit-element": "^2.1.0"
-  },
-  "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.0.0",
-    "wct-browser-legacy": "^1.0.2"
   }
 }
