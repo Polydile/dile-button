@@ -6,17 +6,28 @@
 
     <title>dile-button demo</title>
 
-    <script src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
     <script type="module" src="../dile-button.js"></script>
-</script>
+
+    <style>
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .with-border {
+      --dile-button-padding: 20px;
+      --dile-button-border-width: 2px;
+      --dile-button-border-color: #000;
+    }
+    </style>
   </head>
   <body>
-          <dile-button label="undefined"></dile-button>
-          <dile-button label="primary" role="primary"></dile-button>
-          <dile-button label="danger" role="danger"></dile-button>
-          <dile-button label="warning" role="warning"></dile-button>
-          <dile-button label="success" role="success"></dile-button>
-
+          <dile-button>undefined</dile-button>
+          <dile-button role="primary">primary</dile-button>
+          <dile-button role="primary" disabled>primary disabled</dile-button>
+          <dile-button role="danger">danger</dile-button>
+          <dile-button role="warning">warning</dile-button>
+          <dile-button role="success">success</dile-button>
+          <dile-button role="success" class="with-border">success with border</dile-button>
   </body>
 </html>
