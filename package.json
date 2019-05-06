@@ -8,6 +8,10 @@
     "supports-color": "3.1.2",
     "type-detect": "1.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Polydile/dile-button.git"
+  },
   "main": "dile-button.js",
   "license": "MIT",
   "dependencies": {
