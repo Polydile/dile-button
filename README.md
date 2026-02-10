@@ -1,3 +1,7 @@
+# Moved
+
+This package has moved to @dile/ui in [dile-components catalog](https://dile-components.com/).
+
 # \<dile-button\>
 
 Web Component to implement a simple animated button, based on LitElement
